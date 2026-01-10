@@ -55,7 +55,7 @@ No accounts. No cloud. No analytics.
 
 ## 🧪 Current Status
 
-This project is under active development.
+This project is under active development./ Feature-frozen for now.
 
 ## 🛠 Tech Stack
 
