@@ -55,17 +55,12 @@ No accounts. No cloud. No analytics.
 
 ## 🧪 Current Status
 
-This project is under active development./ Feature-frozen for now.
+Feature-frozen for now.
 
 ## 🛠 Tech Stack
 
-- JavaScript (Chrome Extensions – Manifest V3)
+- Vanilla JavaScript
+- Chrome Extensions API (MV3)
 - HTML / CSS
 
 ## 📄 License
-
-## 🌱 Future Ideas
-
-- Time-Based Insights
-- Daily / Weekly Comparison Toggle
-- Mini “Browser Wrapped” Card
