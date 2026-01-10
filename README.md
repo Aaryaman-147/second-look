@@ -9,6 +9,8 @@ Second Look is a focus-first, lightweight Chrome extension that helps you browse
 Instead of blocking sites outright, it gives you a second look — a gentle nudge that makes you pause and think before opening the same site again.
 It helps you become more aware of your browsing habits by adding small, intentional pauses before reopening distracting sites.
 
+> **Notice → Reflect → Decide**
+
 ## 🧠 Why this exists
 
 We don’t always realise how often we reopen the same tabs — social media, docs, dashboards, videos.
