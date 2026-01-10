@@ -81,3 +81,7 @@ Feature-frozen for now.
 
 ## 📦 Versioning
 **Current version:** `2.0.0`
+
+This release introduces onboarding, focus intelligence,
+behavioral nudges, and a complete visual redesign.
+
