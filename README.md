@@ -1,4 +1,4 @@
-# Second Look 👀 - A mindful browsing Chrome extension
+# Second Look 👀 - A pause between impulse and intent.
 
 <p align="center">
   <img src="screenshots/dashboard.png" width="45%" style="object-fit:contain;" />
