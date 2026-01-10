@@ -1,5 +1,7 @@
 # Second Look 👀 - A mindful browsing Chrome extension
 
+![Second Look Dashboard](screenshots/dashboard.png)
+
 Second Look is a lightweight Chrome extension that helps you browse more intentionally by tracking how often you open certain websites and preventing tab overload. 🚀
 
 Instead of blocking sites outright, it gives you a second look — a gentle nudge that makes you pause and think before opening the same site again.
