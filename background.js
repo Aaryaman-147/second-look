@@ -15,7 +15,7 @@ chrome.tabs.onCreated.addListener(async (tab) => {
 
   data.tabsOpenedToday += 1;
 
-  const hour = new Date().getHours().toString();
+  const hour = new Date().getHours().toString().padStart(2, "0");
   data.hourlyActivity[hour] = (data.hourlyActivity[hour] || 0) + 1;
 
   chrome.tabs.query({}, (tabs) => {
@@ -49,8 +49,8 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       data.siteVisitsToday[site] =
         (data.siteVisitsToday[site] || 0) + 1;
 
-      setData(data);
-      sendResponse({ count: data.siteVisitsToday[site] });
+      await setData(data);
+sendResponse({ count: data.siteVisitsToday[site] });
     })();
 
     return true;
