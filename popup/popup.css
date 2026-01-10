@@ -1,0 +1,127 @@
+:root {
+  --bg: #f7f7f7;
+  --card: #ffffff;
+  --text: #111;
+  --muted: #666;
+  --accent: #4f46e5;
+}
+
+body.dark {
+  --bg: #0f1115;
+  --card: #1a1d24;
+  --text: #f3f4f6;
+  --muted: #9ca3af;
+  --accent: #6366f1;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  width: 320px;
+  margin: 0;
+}
+
+.container {
+  padding: 8px;
+  border-radius: 20px;
+  background: var(--bg);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+h1 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.stat {
+  background: var(--card);
+  padding: 14px;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 80px;
+}
+
+.stat.full {
+  grid-column: span 2;
+}
+
+.subtitle,
+.label {
+  color: var(--muted);
+  margin: 4px 0 12px;
+  font-size: 11px;
+}
+
+.value {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 6px;
+}
+
+h2 {
+  font-size: 13px;
+  margin: 12px 0 6px;
+}
+
+.heatmap {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 4px;
+}
+
+.hour {
+  height: 14px;
+  border-radius: 3px;
+  background: #e5e7eb;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  animation: grow 0.6s ease forwards;
+}
+
+@keyframes grow {
+  to {
+    transform: scaleY(1);
+  }
+}
+
+.controls {
+  margin-bottom: 10px;
+}
+
+.toggle {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.reflection-card {
+  margin-top: 14px;
+  padding: 14px;
+  border-radius: 14px;
+  background: var(--card);
+}
+
+.reflection-card h4 {
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+
+.reflection-card p {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+

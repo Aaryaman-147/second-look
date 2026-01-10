@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Second Look</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Second Look</h1>
+    <p class="subtitle">A pause between impulse and intent.</p>
+
+    <div class="controls">
+  <label class="toggle">
+    <input type="checkbox" id="darkToggle" />
+    <span>Dark mode</span>
+  </label>
+</div>
+
+<label class="toggle">
+  <input type="checkbox" id="oneTabRule" />
+  <span>One Tab Rule</span>
+</label>
+
+    <div class="stats">
+      <div class="stat">
+        <span class="label">Tabs opened today</span>
+        <span id="tabsToday" class="value">—</span>
+      </div>
+      <div class="stat">
+        <span class="label">Peak simultaneous tabs</span>
+        <span id="peakTabs" class="value">—</span>
+      </div>
+      <div class="stat full">
+        <span class="label">Most revisited site</span>
+        <span id="topSite" class="value">—</span>
+      </div>
+    </div>
+
+    <h2>Hourly activity</h2>
+    <div id="heatmap" class="heatmap"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
