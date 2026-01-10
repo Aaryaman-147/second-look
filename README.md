@@ -23,7 +23,7 @@ We don’t always realise how often we reopen the same tabs — social media, do
 
 ## ✨ Features
 
-- 🧭 First-Run Onboarding – Guided setup for new users.
+- 🧭 First-Run Onboarding – First-run welcome experience and clean transition into the dashboard
 
 - 🔢 Site open counter — tracks how many times you open a site, and that's where Second Look steps in and asks you to pause and decide - Continue browsing or Leave and go back
 
@@ -33,9 +33,13 @@ We don’t always realise how often we reopen the same tabs — social media, do
 
 - 🧠 Daily Reflection — After 9 PM, Second Look shows a short end-of-day reflection summarising your activity — once per day, no notifications.
 
-- 🟢 Focus Ring — Visual, real-time indicator of focus level.
+- 🟢 Focus Ring — Visual, real-time indicator of focus level. <br> </br>
+  Colour-coded states:
+  - Cyan → strong focus
+  - Purple → mixed attention
+  - Pink → high distraction
 
-- 🧠 Focus Score – Quantifies how focused your browsing sessions are.
+- 🧠 Focus Score – **Focus Score (0–100)** based on real behavior and quantifies how focused your browsing sessions are.
 
 - 🏷️ Automatic Site Classification – Websites are categorised automatically.
 
