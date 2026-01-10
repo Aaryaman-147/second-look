@@ -64,3 +64,6 @@ Feature-frozen for now.
 - HTML / CSS
 
 ## 📄 License
+
+## 📦 Versioning
+**Current version:** `1.1.0`
