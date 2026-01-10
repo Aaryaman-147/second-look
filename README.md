@@ -57,4 +57,9 @@ No accounts. No cloud. No analytics.
 
 This project is under active development.
 
+## 🛠 Tech Stack
+
+- JavaScript (Chrome Extensions – Manifest V3)
+- HTML / CSS
+
 ## 📄 License
