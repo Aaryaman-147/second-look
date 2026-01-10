@@ -5,7 +5,9 @@ const DEFAULT_DATA = {
   peakTabsToday: 0,
   hourlyActivity: {},
   siteVisitsToday: {},
-  lastResetDate: new Date().toDateString()
+  siteLabels: {},
+  lastResetDate: new Date().toDateString(),
+  hasCompletedOnboarding: false
 };
 
 export function getData() {
@@ -25,18 +27,15 @@ export function resetIfNewDay(data) {
 
   if (!data || data.lastResetDate !== today) {
     return {
-      lastResetDate: today,
-      tabsOpenedToday: 0,
-      peakTabsToday: 0,
-      siteVisitsToday: {},      // ✅ ALWAYS present
-      hourlyActivity: {},       // ✅ ALWAYS present
-      lastReflectionDate: null
+      ...DEFAULT_DATA,
+      hasCompletedOnboarding: data?.hasCompletedOnboarding || false,
+      lastResetDate: today
     };
   }
 
-  // 🔒 Ensure shape even on same day
-  data.siteVisitsToday = data.siteVisitsToday || {};
-  data.hourlyActivity = data.hourlyActivity || {};
+  data.siteVisitsToday ||= {};
+  data.hourlyActivity ||= {};
+  data.siteLabels ||= {};
 
   return data;
 }
