@@ -63,3 +63,9 @@ This project is under active development./ Feature-frozen for now.
 - HTML / CSS
 
 ## 📄 License
+
+## 🌱 Future Ideas
+
+- Time-Based Insights
+- Daily / Weekly Comparison Toggle
+- Mini “Browser Wrapped” Card
