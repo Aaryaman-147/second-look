@@ -23,6 +23,8 @@ We don’t always realise how often we reopen the same tabs — social media, do
 
 ## ✨ Features
 
+- 🧭 First-Run Onboarding – Guided setup for new users.
+
 - 🔢 Site open counter — tracks how many times you open a site, and that's where Second Look steps in and asks you to pause and decide - Continue browsing or Leave and go back
 
 - 🚫 One-tab rule — prevents opening duplicate tabs of the same site
@@ -30,6 +32,12 @@ We don’t always realise how often we reopen the same tabs — social media, do
 - 📊 Usage Dashboard — gives you a clear snapshot of your day: Tabs opened today, Peak simultaneous tabs, Most revisited site, and Hourly activity heatmap
 
 - 🧠 Daily Reflection — After 9 PM, Second Look shows a short end-of-day reflection summarising your activity — once per day, no notifications.
+
+- 🟢 Focus Ring — Visual, real-time indicator of focus level.
+
+- 🧠 Focus Score – Quantifies how focused your browsing sessions are.
+
+- 🏷️ Automatic Site Classification – Websites are categorised automatically.
 
 - 🪶 Lightweight & fast — no tracking servers, all local
 
