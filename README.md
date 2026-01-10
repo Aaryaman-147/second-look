@@ -20,6 +20,17 @@ We don’t always realise how often we reopen the same tabs — social media, do
 - 🪶 Lightweight & fast — no tracking servers, all local
 - 🔒 Privacy-friendly — data stays in your browser
 
+## 📸 Screenshots
+
+### Site Visit Prompt
+A gentle nudge when a site has been opened multiple times.
+
+![Site visit prompt](screenshots/visit-prompt.png)
+
+### One-Tab Rule Mode
+Prevents opening duplicate tabs for the same site.
+
+![One-tab rule mode](screenshots/one-tab-rule.png)
 ## 🛠️ How it works
 
 - Uses Chrome’s tabs and storage APIs
