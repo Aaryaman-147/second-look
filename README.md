@@ -31,8 +31,6 @@ We don’t always realise how often we reopen the same tabs — social media, do
 
 - 📊 Usage Dashboard — gives you a clear snapshot of your day: Tabs opened today, Peak simultaneous tabs, Most revisited site, and Hourly activity heatmap
 
-- 🧠 Daily Reflection — After 9 PM, Second Look shows a short end-of-day reflection summarising your activity — once per day, no notifications.
-
 - 🟢 Focus Ring — Visual, real-time indicator of focus level. <br> </br>
   Colour-coded states:
   - Cyan → strong focus
