@@ -85,3 +85,11 @@ Feature-frozen for now.
 This release introduces onboarding, focus intelligence,
 behavioral nudges, and a complete visual redesign.
 
+##
+
+Second Look doesn’t block distraction.
+It makes you aware of it.
+
+That awareness is the product.
+
+> **Built with ❤️ for deep focus.**
