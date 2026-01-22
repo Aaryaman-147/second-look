@@ -101,6 +101,8 @@ You own your data. Period.
 
 ## 📄 License
 
+This project is licensed under the MIT License. 
+
 ## 📦 Versioning
 **Current version:** `2.0.0`
 
