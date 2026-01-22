@@ -69,6 +69,16 @@ Prevents opening duplicate tabs for the same site.
 
 No accounts. No cloud. No analytics.
 
+## 🚀 Installation
+
+1. Clone or download this repository
+2. Open Chrome and go to `chrome://extensions`
+3. Enable **Developer Mode** (top-right)
+4. Click **Load unpacked**
+5. Select the project folder
+
+Second Look will appear in your toolbar.
+
 ## 🧪 Current Status
 
 Feature-frozen for now.
