@@ -89,6 +89,16 @@ Feature-frozen for now.
 - Chrome Extensions API (MV3)
 - HTML / CSS
 
+## 🔒 Privacy
+
+Second Look:
+- Does not collect personal data
+- Does not send data to any server
+- Works entirely offline
+- Stores all data locally in your browser
+
+You own your data. Period.
+
 ## 📄 License
 
 ## 📦 Versioning
