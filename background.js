@@ -1,14 +1,5 @@
-import { getData, setData, resetIfNewDay } from "./utils/storage.js";
+import { getData, setData, resetIfNewDay } from "./storage.js";
 
-/*
-  Pull-based One Tab Rule state
-*/
-let pendingOneTabTabId = null;
-let pendingOneTabTabCount = 0;
-
-/* ----------------------------------
-   TAB CREATION (stats + One Tab Rule)
----------------------------------- */
 chrome.tabs.onCreated.addListener(async (tab) => {
   let data = await getData();
   data = resetIfNewDay(data);
@@ -26,59 +17,60 @@ chrome.tabs.onCreated.addListener(async (tab) => {
       if (!oneTabRule) return;
       if (tabs.length <= 1) return;
 
-      pendingOneTabTabId = tab.id;
-      pendingOneTabTabCount = tabs.length;
+      chrome.storage.session.set({
+        pendingOneTabTabId: tab.id,
+        pendingOneTabTabCount: tabs.length
+      });
     });
   });
 });
 
-/* ----------------------------------
-   MESSAGE HANDLING
----------------------------------- */
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-  /* Site visit tracking */
+
   if (message.type === "SITE_VISIT") {
+
     (async () => {
       let data = await getData();
       data = resetIfNewDay(data);
 
-      // 🔧 GUARANTEE SHAPE
       data.siteVisitsToday = data.siteVisitsToday || {};
 
       const site = message.site;
-      data.siteVisitsToday[site] =
-        (data.siteVisitsToday[site] || 0) + 1;
+      data.siteVisitsToday[site] = (data.siteVisitsToday[site] || 0) + 1;
 
       await setData(data);
-sendResponse({ count: data.siteVisitsToday[site] });
+      sendResponse({ count: data.siteVisitsToday[site] });
     })();
 
-    return true;
+    return true; 
   }
 
-  /* One Tab Rule pull check */
   if (message.type === "CHECK_ONE_TAB_PROMPT") {
-    const shouldPrompt = sender.tab?.id === pendingOneTabTabId;
 
-    if (shouldPrompt) {
-      pendingOneTabTabId = null;
-    }
+    chrome.storage.session.get(["pendingOneTabTabId", "pendingOneTabTabCount"], (result) => {
+      const pendingId = result.pendingOneTabTabId;
+      const count = result.pendingOneTabTabCount || 0;
+      
+      const shouldPrompt = sender.tab?.id === pendingId;
 
-    sendResponse({
-      shouldPrompt,
-      tabCount: pendingOneTabTabCount
+      if (shouldPrompt) {
+
+        chrome.storage.session.remove(["pendingOneTabTabId", "pendingOneTabTabCount"]);
+      }
+
+      sendResponse({
+        shouldPrompt,
+        tabCount: count
+      });
     });
-    return true;
+    return true; 
   }
 
-  /* Reset when toggle is turned ON again */
   if (message.type === "RESET_ONE_TAB_RULE") {
-    pendingOneTabTabId = null;
-    pendingOneTabTabCount = 0;
+    chrome.storage.session.remove(["pendingOneTabTabId", "pendingOneTabTabCount"]);
     return;
   }
 
-  /* Close current tab */
   if (message.type === "CLOSE_CURRENT_TAB") {
     if (sender.tab?.id) {
       chrome.tabs.remove(sender.tab.id);

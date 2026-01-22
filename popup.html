@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Second Look</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+
+<div id="welcome" class="welcome">
+  <h1>Welcome to Second Look 👋</h1>
+  <p>
+    This extension helps you pause, notice patterns,
+    and build intentional browsing habits.
+  </p>
+  <button id="startBtn">Start</button>
+</div>
+
+<div id="app" class="container">
+  <div class="header">
+    <h1><span>Second Look </span></h1>
+    <p class="tagline">A pause between impulse and intent.</p>
+  </div>
+
+  <div class="toggles">
+    <button id="darkToggleBtn" class="toggle">🌙 Dark</button>
+    <button id="oneTabToggleBtn" class="toggle">🧠 One Tab</button>
+    <button id="snoozeBtn" class="toggle">💤 Snooze 1h</button> </div>
+
+  <div class="stat full focus">
+    <span class="label">Focus score</span>
+
+    <div class="focus-ring">
+      <div class="focus-ring-inner">
+        <span id="focusScore" class="value">94</span>
+      </div>
+    </div>
+
+    <span id="focusHint" class="subtitle">Strong focus today</span>
+  </div>
+
+  <div id="wrapped"></div>
+
+  <div class="stats">
+    <div class="stat">
+      <span class="label">Tabs opened today</span>
+      <span id="tabsToday" class="value">—</span>
+    </div>
+
+    <div class="stat">
+      <span class="label">Peak tabs</span>
+      <span id="peakTabs" class="value">—</span>
+    </div>
+
+    <div class="stat full">
+      <span class="label">Most revisited site</span>
+      <span id="topSite" class="value">—</span>
+      <span id="siteCategory" class="category-badge">—</span>
+    </div>
+  </div>
+
+  <h2>Hourly activity</h2>
+  <div id="heatmap" class="heatmap"></div>
+</div>
+
+<script src="popup.js"></script>
+</body>
+</html>
